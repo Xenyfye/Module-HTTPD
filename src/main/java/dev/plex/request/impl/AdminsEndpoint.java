@@ -46,10 +46,12 @@ public class AdminsEndpoint extends AbstractServlet
                 plexPlayer.setIps(null)).toList();
     }
 
+
     @GetMapping(endpoint = "/api/admins/")
     @MappingHeaders(headers = "content-type;application/json")
     public String getAdmins(HttpServletRequest request, HttpServletResponse response)
     {
+
         String ipAddress = request.getRemoteAddr();
         if (ipAddress == null)
         {
